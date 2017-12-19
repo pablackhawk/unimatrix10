@@ -1,0 +1,29 @@
+{
+  "name": "unimatrix10-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot for all your assimilation needs!",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablackhawk/unimatrix10.git"
+  },
+  "keywords": [
+    "Discord",
+    "bot",
+    "Borg"
+  ],
+  "author": "Laurentius Tirtarahardja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablackhawk/unimatrix10/issues"
+  },
+  "homepage": "https://github.com/pablackhawk/unimatrix10#readme",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "git": "^0.1.5",
+    "winston": "^2.4.0"
+  }
+}
