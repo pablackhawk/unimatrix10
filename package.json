@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/pablackhawk/unimatrix10#readme",
   "dependencies": {
-    "discord.io": "github:woor/discord.io#gateway_v6",
+    "discord.js": "^11.2.1",
     "git": "^0.1.5",
     "winston": "^2.4.0"
   }

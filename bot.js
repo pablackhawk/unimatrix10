@@ -1,6 +1,7 @@
-var Discord = require('discord.io')
-var logger = require('winston')
-var auth = require('./auth.json')
+const Discord = require('discord.js')
+const logger = require('winston')
+const auth = require('./auth.json')
+const token = auth.token
 // logger settings configuration
 logger.remove(logger.transports.Console)
 logger.add(logger.transports.Console, {
@@ -9,31 +10,29 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug'
 
 // Bot initialization
-var bot = new Discord.Client({
-  token: auth.token,
-  autorun: true
-})
+var bot = new Discord.Client()
 bot.on('ready', function (evt) {
   logger.info('Connected')
-  logger.info('Logged in as: ')
-  logger.info(bot.username + ' - (' + bot.id + ')')
+  logger.info('Logged in')
 })
-bot.on('message', function (user, userID, channelID, message, evt) {
-  // Listens for command execution
-  // Listens for messages that start with '!'
-  if (message.substring(0, 1) === '!') {
-    var args = message.substring(1).split(' ')
-    var cmd = args[0]
-
-    args = args.splice(1)
-    switch (cmd) {
-      // !ping
-      case 'ping':
-        bot.sendMessage({
-          to: channelID,
-          message: 'Pong!'
-        })
-        break
-    }
+bot.login(token)
+bot.on('message', message => {
+  switch (message.content) {
+    // !ping
+    case '!ping':
+      message.reply('Pong!')
+      break
+    // !hello
+    case '!hello':
+      message.reply('Hello! Welcome to the server!')
+      break
+    // !spoilers
+    case '!spoilers':
+      message.reply(`Absolutely NO spoilers for the latest episode in general channels until the Wednesday after it airs. All spoiler-related discussions should stay in <#393944416282214402>.\n\nSpoilers are banned in <#393944470485336064> and <#393944502009593879> for the first 24 hours after airing.`)
+      break
+    // !sot
+    case '!sot':
+      message.reply('Shield of Tomorrow currently airs Fridays at 4PM Pacific Time (GMT-8) on the Geek and Sundry Twitch channel (https://www.twitch.tv/geekandsundry)')
+      break
   }
 })
