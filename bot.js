@@ -2,6 +2,9 @@ const Discord = require('discord.js')
 const logger = require('winston')
 const auth = require('./auth.json')
 const token = auth.token
+let bridge = '#393944416282214402'
+let crewActivity = '#393944470485336064'
+let ooc = '#393944502009593879'
 // logger settings configuration
 logger.remove(logger.transports.Console)
 logger.add(logger.transports.Console, {
@@ -28,11 +31,12 @@ bot.on('message', message => {
       break
     // !spoilers
     case '!spoilers':
-      message.reply(`Absolutely NO spoilers for the latest episode in general channels until the Wednesday after it airs. All spoiler-related discussions should stay in <#393944416282214402>.\n\nSpoilers are banned in <#393944470485336064> and <#393944502009593879> for the first 24 hours after airing.`)
+      message.reply('Absolutely NO spoilers for the latest episode in general channels until the Wednesday after it airs. All spoiler-related discussions should stay in <' + bridge + '>.\n\nSpoilers are banned in <' + crewActivity + '> and <' + ooc + '> for the first 24 hours after airing.')
       break
     // !sot
     case '!sot':
       message.reply('Shield of Tomorrow currently airs Fridays at 4PM Pacific Time (GMT-8) on the Geek and Sundry Twitch channel (https://www.twitch.tv/geekandsundry)')
       break
+    // !
   }
 })
