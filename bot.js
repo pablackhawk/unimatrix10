@@ -13,7 +13,7 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug'
 
 // Bot initialization
-var bot = new Discord.Client()
+let bot = new Discord.Client()
 bot.on('ready', function(evt) {
   logger.info('Connected')
   logger.info('Logged in')
@@ -50,6 +50,14 @@ bot.on('message', message => {
     // !talkabout
     case '!talkabout':
       message.reply("I don't know what you're talking about...")
+      break
+    // !cato
+    case '!cato':
+      message.reply('Cato: SHIP! COMBAT!')
+      break
+    // !belowdeckspodcast
+    case '!belowdeckspodcast':
+      message('Follow the Below Decks Podcast! https://www.belowdeckspodcast.com')
       break
   }
 })
