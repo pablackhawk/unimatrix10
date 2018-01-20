@@ -23,6 +23,6 @@
   "homepage": "https://github.com/pablackhawk/unimatrix10#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "git": "^0.1.5",
+    "git": "^0.1.5"
   }
 }
