@@ -49,6 +49,9 @@ let command = args.shift().toLowerCase()
     case 'belowdeckspodcast':
       msg.reply('Follow the Below Decks Podcast! https://www.belowdeckspodcast.com')
       break
+    case 'martinez'
+      msg.reply('Faaantastic...')
+      break
   }
 })
  
