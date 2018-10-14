@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/pablackhawk/unimatrix10#readme",
   "dependencies": {
+    "cryptiles": "^4.1.2",
     "discord.js": "^11.4.2",
     "dotenv": "^5.0.1",
     "git": "^0.1.5",
