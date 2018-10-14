@@ -2,16 +2,20 @@
   "name": "unimatrix10-bot",
   "version": "1.0.0",
   "description": "A Discord bot for all your assimilation needs!",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon bot.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pablackhawk/unimatrix10.git"
   },
-  "keywords": ["Discord", "bot", "Borg"],
+  "keywords": [
+    "Discord",
+    "bot",
+    "Borg"
+  ],
   "author": "Laurentius Tirtarahardja",
   "license": "ISC",
   "bugs": {
@@ -19,8 +23,19 @@
   },
   "homepage": "https://github.com/pablackhawk/unimatrix10#readme",
   "dependencies": {
-    "discord.js": "^11.2.1",
+    "discord.js": "^11.4.2",
+    "dotenv": "^5.0.1",
     "git": "^0.1.5",
-    "nodemon": "^1.17.2"
+    "hockeybar": "0.0.1-alpha.13",
+    "lodash": "^4.17.11",
+    "mime": "^2.3.1",
+    "momentjs": "^2.0.0",
+    "mongodb": "^3.1.8",
+    "nodemon": "^1.18.4",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.0",
+    "twitter": "^1.7.1",
+    "xml2js": "^0.4.19"
   }
 }
